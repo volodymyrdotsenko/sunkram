@@ -1,13 +1,13 @@
 
 *{
-	padding: 0;
-	margin: 0;
-	border: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
 }
 *,*:before,*:after{
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 :focus,:active{outline: none;}
 a:focus,a:active{outline: none;}
@@ -15,16 +15,16 @@ a:focus,a:active{outline: none;}
 nav,footer,header,aside{display: block;}
 
 html,body{
-	height: 100%;
-	width: 100%;
-	font-size: 100%;
-	line-height: 1;
-	font-size: 14px;
-	-ms-text-size-adjust: 100%;
-	-moz-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-	display: flex;
-	justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    display: flex;
+    justify-content: center;
 }
 input,button,textarea{font-family:inherit;}
 
@@ -95,12 +95,12 @@ header, header *, footer {
     max-width: 1280px;
 }
 section.section__purple{
-	background: #D9B4F9;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	border-bottom: 0.25rem solid #000;
-	position: relative;
+    background: #D9B4F9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 0.25rem solid #000;
+    position: relative;
 }
 p.section__purple_hero-p {
     font-size: 2.25rem;
@@ -266,6 +266,7 @@ span.footer__about-text {
 @media (max-width: 767px) {
   .wrapper {
     /* padding: 50px 10px; */
+    overflow-x: hidden;
   }
 }
 
@@ -706,14 +707,14 @@ img.about_star {
     top: 0rem;
 }
 .about__grid{
-	display: inline-grid;
-	grid-template-columns: 1fr 2fr 2fr 1fr 2fr;
-	grid-template-rows: 5rem repeat(2, 1fr) repeat(2, 5rem);
-	grid-column-gap: 0px;
-	grid-row-gap: 0px;
-	border: 6px solid black;
-	grid-gap: 6px;
-	background-color: black;
+    display: inline-grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr 2fr;
+    grid-template-rows: 5rem repeat(2, 1fr) repeat(2, 5rem);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    border: 6px solid black;
+    grid-gap: 6px;
+    background-color: black;
 }
 .about__grid.div1 { grid-area: 1 / 1 / 2 / 3; }
 .about__grid.div2 { grid-area: 1 / 3 / 2 / 6; }
@@ -934,7 +935,7 @@ span.section__purple_hero-img-caption:last-of-type {
 }
 
 * {
-    outline: 1px solid;
+    /* outline: 1px solid; */
 }
 
 .new__bage {
