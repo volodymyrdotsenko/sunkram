@@ -21,7 +21,7 @@
 	</head>
 	<!-- Отображаемое тело страницы -->
 	<body>
-		<div class="wrapper">
+		<div class="wrapper" id="top">
 			<header> 
 				<div class="header__container">
 					<div class="header__logo-container">
@@ -29,10 +29,10 @@
 				</div>
 				<div class="header__menu-container">
 					<ul class="header__menu-list">
-						<li class="header__menu-item">Головна</li>
-						<li class="header__menu-item">Популярні</li>
-						<li class="header__menu-item">Про нас</li>
-						<li class="header__menu-item">Контакти</li>
+						<li class="header__menu-item"><a href="#top" class="smoothscroll">Головна</a></li>
+						<li class="header__menu-item"><a href="#popular" class="smoothscroll">Популярні</a></li>
+						<li class="header__menu-item"><a href="#about_us" class="smoothscroll">Про нас</a></li>
+						<li class="header__menu-item"><a href="#contacts" class="smoothscroll">Контакти</a></li>
 					</ul>
 				</div>
 				<div class="header__btns-container">
@@ -59,7 +59,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="section__biege">
+				<section class="section__biege" id="popular">
 					<div class="container">
 					<h2 class="heading__regular">Популярні</h2>
 						<div class="slider">
@@ -158,7 +158,7 @@
 </div>
 						
 					</section>
-				<section class="section__pink">
+				<section class="section__pink" id="about_us">
 					<div class="container">
 						<h2 class="heading__regular">Про нас (FLEX)</h2>
 						
@@ -225,7 +225,7 @@
 						
 					</div>
 				</section>
-				<section class="section__light-img">
+				<section class="section__light-img" id="contacts">
 					<div class="container">
 						<h2 class="heading__regular">Наш шоурум</h2>
 						<div class="about-us__container">
@@ -414,6 +414,52 @@
 // 	});
   //   });
   </script>
-  
+  <script>
+  			 $(document).ready(function() {
+
+
+	"use strict";
+
+	var cfg = {		
+		defAnimation   : "fadeInUp",    // default css animation		
+		scrollDuration : 800,           // smoothscroll duration
+		mailChimpURL   : 'http://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e65110b38d'
+	},	
+
+	$WIN = $(window);
+	
+
+   // Add the User Agent to the <html>
+   // will be used for IE10 detection (Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0))
+	var doc = document.documentElement;
+	doc.setAttribute('data-useragent', navigator.userAgent);
+  /* Smooth Scrolling
+	* ------------------------------------------------------ */
+	var ssSmoothScroll = function() {
+
+		$('.smoothscroll').on('click', function (e) {
+			var target = this.hash,
+			$target    = $(target);
+	 	
+		 	e.preventDefault();
+		 	e.stopPropagation();	   	
+
+	    	$('html, body').stop().animate({
+	       	'scrollTop': $target.offset().top
+	      }, cfg.scrollDuration, 'swing').promise().done(function () {
+
+	      	// check if menu is open
+	      	if ($('body').hasClass('menu-is-open')) {
+					$('#header-menu-trigger').trigger('click');
+				}
+
+	      	window.location.hash = target;
+	      });
+	  	});
+
+	};
+
+});
+  </script>
 	</body>
 </html>
