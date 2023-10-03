@@ -73,7 +73,7 @@ header, header *, footer {
 }
   
 
-/*ÐžÐ±Ð½ÑƒÐ»ÐµÐ½Ð¸Ðµ*/
+/*ÃÅ¾ÃÂ±ÃÂ½Ã‘Æ’ÃÂ»ÃÂµÃÂ½ÃÂ¸ÃÂµ*/
 .wrapper>header {
     background: #FFD000;
     border-bottom: 0.25rem solid #000;
@@ -1046,4 +1046,56 @@ section.section__light-img .about-us__container {
 }
 
 .header__container {}
+}
+@media (min-width:768px) and (max-width: 1280px){
+    img.section__purple_hero-img {
+    max-width: 100%;
+}
+
+section.section__biege>div {
+    max-width: 100%;
+}
+
+.newcollection__image-container:nth-of-type(3)::before {
+    max-width: 90%;
+    max-height: 70%;
+}
+
+.container {
+    max-width: 90vw;
+}
+
+.about-us__container {
+    max-width: 100%;
+}
+
+    
+img.newcollection__image-img {
+    max-width: 34vw;
+}
+
+h2.heading__caps {
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+}
+
+section.section__green .container {
+    align-items: flex-start;
+}
+.section__purple-inst-img {
+    width: 17rem;
+    height: 17rem;
+}
+
+.section__purple-inst-img img {
+    width: 100%;
+}
+
+.new__bage.yellow {
+    right: 0;
+}
+
+.header__container {
+    max-width: 90vw;
+}
 }
