@@ -36,8 +36,10 @@
 					</ul>
 				</div>
 				<div class="header__btns-container">
+
 					<button class="header__btns-cartbtn"></button>
 					<button class="header__btns-likebtn"></button>
+					<button class="header__btns-menubtn"></button>
 				</div>
 				</div>
 			</header>
@@ -105,7 +107,7 @@
    <p class="marquee__line"><i class="square"></i> Sunкрам </p>
   </div>
 </div>
-				<section class="section__pink">
+				<section class="section__pink" style="display: none;">
 					<div class="container">
 						<h2 class="heading__regular">Про нас (GRID)</h2>
 						
@@ -294,7 +296,7 @@
 					<ul class="footer__socials-list">
 						<li class="footer__socials-item"><i id="fb"></i>Facebook</li>
 						<li class="footer__socials-item"><i id="ig"></i>Instagram</li>
-						<li class="footer__socials-item"><i id="tg"></i>Telegran</li>
+						<li class="footer__socials-item"><i id="tg"></i>Telegram</li>
 					</ul>
 				</div>
 				<div class="footer__about-container">
@@ -323,7 +325,7 @@
    // autoplaySpeed: 700,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 968,
         settings: {
           slidesToShow: 2
         }
@@ -337,7 +339,50 @@
     ]
   });
 });
+  var scrollWindow = function() {
+    $(window).scroll(function(){
+      var $w = $(this),
+          st = $w.scrollTop(),
+          navbar = $('.header__container'),
+          sd = $('.js-scroll-wrap'), 
+          toggle = $('.site-menu-toggle');
 
+      // if ( toggle.hasClass('open') ) {
+      //   $('.site-menu-toggle').trigger('click');
+      // }
+      
+
+      if (st > 150) {
+        if ( !navbar.hasClass('scrolled') ) {
+          navbar.addClass('scrolled');  
+        }
+      } 
+      if (st < 150) {
+        if ( navbar.hasClass('scrolled') ) {
+          navbar.removeClass('scrolled sleep');
+        }
+      } 
+      if ( st > 350 ) {
+        if ( !navbar.hasClass('awake') ) {
+          navbar.addClass('awake'); 
+        }
+        
+        if(sd.length > 0) {
+          sd.addClass('sleep');
+        }
+      }
+      if ( st < 350 ) {
+        if ( navbar.hasClass('awake') ) {
+          navbar.removeClass('awake');
+          navbar.addClass('sleep');
+        }
+        if(sd.length > 0) {
+          sd.removeClass('sleep');
+        }
+      }
+    });
+  };
+  scrollWindow();
 
   //   $(document).ready(function(){
   //     $('.slider').slick({
@@ -369,5 +414,6 @@
 // 	});
   //   });
   </script>
+  
 	</body>
 </html>
