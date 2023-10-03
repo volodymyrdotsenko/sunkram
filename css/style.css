@@ -1113,7 +1113,8 @@ section.section__biege>div {
 
 .about-us__container {
     max-width: 100%;
-    min-height: 30REM;
+    min-height: auto;
+    height: min-content !important;
 }
 
     
@@ -1146,7 +1147,14 @@ section.section__green .container {
     max-width: 90vw;
 }span.section__purple_hero-img-caption {
     font-size: -webkit-xxx-large;
+}p.about-us__text {
+    font-size: 1.375rem;
 }
+
+li.about-us__contacts-list-item {
+    font-size: 1.375rem;
+}
+
 }
 
 
