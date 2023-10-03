@@ -1113,7 +1113,7 @@ section.section__biege>div {
 
 .about-us__container {
     max-width: 100%;
-    min-height: auto;
+    min-height: 30REM;
 }
 
     
