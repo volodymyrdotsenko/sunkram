@@ -1200,3 +1200,13 @@ button.header__btns-cartbtn:hover {
     box-shadow: 0rem 0rem;
     transition: 0.5s ease;
     transform: translate(1px, 1px);}
+.header__container.scrolled.awake {
+    position: fixed !important;
+    top: 0;
+    z-index: 99;
+    background: #ffd000;
+    border-bottom: 6px solid;
+    min-width: 100vw !important;
+    padding: 0 10vw;
+}
+
