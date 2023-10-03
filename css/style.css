@@ -65,6 +65,7 @@ header, header *, footer {
     font-family: 'Nunito';
     /* max-width: 1290px; */
     align-self: center !important;
+    color: #000;
 }
 .header__btns-container>button {
     width: 2.25rem;
@@ -1203,7 +1204,7 @@ button.header__btns-cartbtn:hover {
 .header__container.scrolled.awake {
     position: fixed !important;
     top: 0;
-    z-index: 99;
+    z-index: 99999;
     background: #ffd000;
     border-bottom: 6px solid;
     min-width: 100vw !important;
