@@ -396,7 +396,7 @@ section.section__green h2.heading__caps {
     letter-spacing: 0.46419rem;
     position: absolute;
     top: 40%;
-    left: 30%;
+    left: 25%;
     color: #FFD000;
     transform: rotate(15deg);
 }
@@ -867,7 +867,7 @@ li.footer__socials-item {
     
 
 .container {
-    max-width: 90vw;
+    max-width: 95vw;
 }
 
 .section__purple_hero {
@@ -886,7 +886,7 @@ img.section__purple_hero-img {
 }
 
 span.section__purple_hero-img-caption:first-of-type {
-    font-size: 1.2rem;
+    font-size: 2.2rem;
     top: 0;
     left: 0;
 }
@@ -897,6 +897,7 @@ p.section__purple_hero-p {
 
 button.section__purple_btn {
     font-size: 1.5rem;
+    padding: 0.5rem 2rem;
 }
 
 ul.header__menu-list {
@@ -925,9 +926,10 @@ ul.header__menu-list {
 }
 
 span.section__purple_hero-img-caption:last-of-type {
-    font-size: 1.2rem;
+    font-size: 2.2rem;
     bottom: 0;
     left: 0;
+    max-width: 80%;
 }section.section__green .container {
     max-height: unset;
     max-width: 100%;
@@ -939,11 +941,11 @@ span.section__purple_hero-img-caption:last-of-type {
 }
 
 .new__bage {
-    width: 8rem !important;
-    height: 8rem !important;
+    width: 12rem !important;
+    height: 12rem !important;
     left: unset;
     right: 4rem !important;
-    top: -2rem !important;
+    top: -7rem !important;
 }
 
 .newcollection__heading-container {
@@ -990,6 +992,9 @@ p.grid__p-text {
 
 .about__grid {
     max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(85vw, 0fr));
+    grid-template-rows: auto;
 }
 
 h3.about-us__heading {
@@ -1013,5 +1018,32 @@ h3.about-us__heading {
 
 .slide {
     gap: 2rem;
+}.about__grid>div {
+    grid-area: unset;
+}section.section__purple .container {
+    gap: 2rem;
 }
+
+.flex-grid-col-1:has(i.emmpty), .flex-grid-col-11:has(i.emmpty), .flex-grid-col-5:has(i.emmpty), .flex-grid-col-7:has(i.emmpty) {
+    display: none;
+}
+
+.flex-grid-col-11 {border-right: unset;}
+
+.about-us__container-ghost1 {
+    left: 1rem;
+    top: 1rem;
+}
+
+.about-us__container-ghost2 {
+    left: 1.5rem;
+    top: 1.6rem;
+}
+
+section.section__light-img .about-us__container {
+    width: 90vw !important;
+    max-width: 90vw !important;
+}
+
+.header__container {}
 }
